@@ -555,4 +555,4 @@ locationManager.BeaconRegion = BeaconRegion;
 locationManager.Delegate = Delegate;
 
 module.exports = LocationManager.prototype;
-//module.exports.locationManager = locationManager;
+module.exports.locationManager = locationManager;
