@@ -76,7 +76,7 @@
   <platform name="android">
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="LocationManager" >
-          <param name="android-package" value="com.unarin.cordova.beacon.LocationManager"/>
+          <param name="android-package" value="hk.hku.its.ibeacon.LocationManager"/>
         </feature>
     </config-file>
 
@@ -106,17 +106,17 @@
         android:name="org.altbeacon.beacon.BeaconIntentProcessor">
         <meta-data android:name="background" android:value="true" />
         <intent-filter android:priority="1" >
-          <action android:name="com.unarin.cordova.beacon.IBeaconPlugin.DID_RANGING" />
-          <action android:name="com.unarin.cordova.beacon.IBeaconPlugin.DID_MONITORING" />
+          <action android:name="hk.hku.its.ibeacon.IBeaconPlugin.DID_RANGING" />
+          <action android:name="hk.hku.its.ibeacon.IBeaconPlugin.DID_MONITORING" />
         </intent-filter>
       </service>
       <service android:name="org.altbeacon.beacon.service.ScanJob" android:permission="android.permission.BIND_JOB_SERVICE" />
     </config-file>
 
-    <source-file src="src/android/LocationManager.java" target-dir="src/com/unarin/cordova/beacon" />
-    <source-file src="src/android/IBeaconServiceNotifier.java" target-dir="src/com/unarin/cordova/beacon" />
-    <source-file src="src/android/ILocationManagerCommand.java" target-dir="src/com/unarin/cordova/beacon" />
-    <source-file src="src/android/PausableThreadPoolExecutor.java" target-dir="src/com/unarin/cordova/beacon" />
+    <source-file src="src/android/hk/hku/its/ibeacon/LocationManager.java" target-dir="src/hk/hku/its/ibeacon" />
+    <source-file src="src/android/hk/hku/its/ibeacon/IBeaconServiceNotifier.java" target-dir="src/hk/hku/its/ibeacon" />
+    <source-file src="src/android/hk/hku/its/ibeacon/ILocationManagerCommand.java" target-dir="src/hk/hku/its/ibeacon" />
+    <source-file src="src/android/hk/hku/its/ibeacon/PausableThreadPoolExecutor.java" target-dir="src/hk/hku/its/ibeacon" />
 
     <lib-file src="libs/android/altbeacon.jar" />
   </platform>

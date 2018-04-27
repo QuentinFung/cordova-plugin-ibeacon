@@ -17,8 +17,8 @@
  under the License.
  */
 
-var _ = require('com.unarin.cordova.beacon.underscorejs');
-var Region = require('com.unarin.cordova.beacon.Region');
+var _ = require('cordova-plugin-its-ibeacon.underscorejs');
+var Region = require('cordova-plugin-its-ibeacon.Region');
 
 /**
  * Constructor for {CLBeaconRegion}.
@@ -50,7 +50,7 @@ function BeaconRegion (identifier, uuid, major, minor, notifyEntryStateOnDisplay
     } else {
         this.uuid = uuid;
     }
-    
+
     this.major = major;
     this.minor = minor;
     this.notifyEntryStateOnDisplay = notifyEntryStateOnDisplay;
@@ -118,4 +118,3 @@ BeaconRegion.U_INT_16_MIN_VALUE = 0;
 
 
 module.exports = BeaconRegion;
-
