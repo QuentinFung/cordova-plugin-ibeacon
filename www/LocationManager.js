@@ -554,5 +554,5 @@ locationManager.CircularRegion = CircularRegion;
 locationManager.BeaconRegion = BeaconRegion;
 locationManager.Delegate = Delegate;
 
-module.exports = LocationManager._prototype;
-module.exports.locationManager = locationManager;
+module.exports = LocationManager.prototype;
+//module.exports.locationManager = locationManager;
