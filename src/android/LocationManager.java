@@ -709,15 +709,18 @@ public class LocationManager extends CordovaPlugin implements BeaconConsumer {
         });
     }
 
-
     private void enableBluetooth(CallbackContext callbackContext) {
-
+      final CordovaPlugin self = this;
         _handleCallSafely(callbackContext, new ILocationManagerCommand() {
 
             @Override
             public PluginResult run() {
                 try {
-                    bluetoothAdapter.enable();
+                    //bluetoothAdapter.enable();
+                    if (bluetoothAdapter.getState() != BluetoothAdapter.STATE_ON) {
+                      Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+                      cordova.startActivityForResult(self, enableBtIntent, 1);
+                    }
                     PluginResult result = new PluginResult(PluginResult.Status.OK);
                     result.setKeepCallback(true);
                     return result;
