@@ -48,16 +48,16 @@
     </config-file>
 
     <config-file target="*-Info.plist" parent="NSLocationAlwaysUsageDescription">
-      <string>This app would like to scan for iBeacons even when in the background.</string>
+      <string>This app would like to scan for beacons even when in the background.</string>
     </config-file>
     <config-file target="*-Info.plist" parent="NSLocationWhenInUseUsageDescription">
-      <string>This app would like to scan for iBeacons while it is in use.</string>
+      <string>This app would like to scan for beacons.</string>
     </config-file>
     <config-file target="*-Info.plist" parent="NSBluetoothPeripheralUsageDescription">
-      <string>This app would like to scan for iBeacons.</string>
+      <string>This app would like to scan for beacons.</string>
     </config-file>
     <config-file target="*-Info.plist" parent="NSLocationAlwaysAndWhenInUseUsageDescription">
-      <string>This app would like to scan for iBeacons both while in use and while in the background.</string>
+      <string>This app would like to scan for beacons both while in use and in the background.</string>
     </config-file>
 
     <header-file src="src/ios/CDVLocationManager.h"/>
